@@ -51,7 +51,7 @@ def Stats():
   df['Total'] = df['Total'].astype(int)
   df['Name'] = df['Name'].astype(str)
   df['Stats'] = df['Stats'].astype(int)
-  
+
   print("Contents in csv file:\n", df)
   plt.plot(df['Name'], df['Stats'])
   plt.xlabel('Names')
@@ -90,26 +90,9 @@ with open('input.csv', mode='a', newline='') as file:
 
   # Write a header row
   writer.writerow(["Input"])
-  
+
 
 def clear():
   os.system('cls' if os.name=='nt' else 'clear') # clears the terminal/console
 
 
-def Types():
-  """
-  function to make and display a table showing types of various 
-  Pokémon.
-  """
-  df = pd.read_csv('pokemon.csv', usecols=['Name', 'Type1', 'Type2'])
-  """
-  Explicitly casts columns to desired data types after using 
-  these 
-  methods.
-  """
-  df['Total'] = df['Total'].astype(int)
-  df['Name'] = df['Name'].astype(str)
-  df['Type1'] = df['Type1'].astype(str)
-  df['Type2'] = df['Type2'].astype(str)
-  print("Types of the Pokemon:\n", df)
-  df.head()
