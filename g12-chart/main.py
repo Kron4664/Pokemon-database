@@ -25,6 +25,7 @@ from matplotlib import pyplot as plt
 import databasefunctions
 
 print("Hello ( >.<)\nSearch a pokemon and Choose 'n' if you want to see the chart and stat reference.\n")
+
 class Modify:
   """
   class used to form a new file using the pokemon.csv file and modify 
@@ -34,7 +35,6 @@ class Modify:
   create the chart.
   """ 
   databasefunctions.modify_csv()
-  #print("\nThe cummulative Remainder is: ", cummulativeRemainder, "\n")#WIP
 
 class PokemonBase:
   """
